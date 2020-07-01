@@ -1,1 +1,37 @@
-<p>recipe-detail works!</p>
+<div class="row">
+    <div class="col-md-12">
+        <img src="" alt="" class="img-responsive">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h1>Recipe name</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="dropdown" 
+            (click)="showOrNot = !showOrNot" 
+            [class.show]="showOrNot" 
+            (window:resize)="showOrNot = false">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Manage Recipe
+            </button>
+            <div class="dropdown-menu" [class.show]="showOrNot" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">To Shopping List</a>
+              <a class="dropdown-item" href="#">Edit Recipe</a>
+              <a class="dropdown-item" href="#">Delete REcipe</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        Description
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        Ingredient
+    </div>
+</div>

@@ -9,6 +9,7 @@ import { Recipe } from '../recipe.model';
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [
     new Recipe('Squid', 'Crispy Fried Squid', 'https://img.delicious.com.au/RmCO55OJ/w1200/del/2017/03/fried-squid-with-garlic-and-parsley-43025-2.jpg'),
+    new Recipe('Squid', 'Crispy Fried Squid', 'https://img.delicious.com.au/RmCO55OJ/w1200/del/2017/03/fried-squid-with-garlic-and-parsley-43025-2.jpg'),
   ];
   constructor() { }
 
