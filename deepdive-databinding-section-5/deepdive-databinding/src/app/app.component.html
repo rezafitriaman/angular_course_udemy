@@ -1,0 +1,39 @@
+<div class="container">
+  <app-cockpit (srCreated)="onServerAdded($event)"
+                (bpCreated)="onBlueprintAdded($event)"></app-cockpit>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="onChangeFirst()">change first Element</button>
+      <button class="btn btn-danger" (click)="onDestroyFirst()">destroy first Element</button>
+      <app-server-element 
+        *ngFor="let serverElement of serverElements"
+        [srvElement]="serverElement"
+        [name]="serverElement.name">
+        <!-- its a hoek <ng-content></ng-content>-->
+        <ul class="list-group list-group-flush" #contentParagraph>
+          <li class="list-group-item" 
+          *ngIf="serverElement.type === 'server'" 
+          [class.example-class]="serverElement.type === 'server'">server: {{serverElement.content}}</li>
+          <li class="list-group-item" 
+              *ngIf="serverElement.type === 'blueprint'"
+              [class.other-class]="serverElement.type === 'blueprint'">blueprint: {{serverElement.content}}</li>
+        </ul>
+      </app-server-element>
+    </div>
+  </div> 
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Assigment</h2>
+      <app-game-control
+        (srcIntervalFired)="onIntervalFired($event)"></app-game-control>
+    </div>
+    <div class="col-md-12">
+      <app-even *ngFor="let oddNumber of oddNumbers" [number]="oddNumber"></app-even>
+    </div>
+    <div class="col-md-12">
+      <app-odd *ngFor="let evenNumber of evenNumbers" [number]="evenNumber"></app-odd>
+    </div>
+  </div>
+</div>
