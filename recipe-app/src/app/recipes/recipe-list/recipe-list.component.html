@@ -6,17 +6,9 @@
 <div class="dropdown-divider"></div>
 <div class="row">
     <div class="col-md-12">
-        <div class="card mt-2" *ngFor="let recipe of recipes">
-            <img [src]="recipe.imagePath" 
-                class="card-img-top img-responsive" 
-                alt="{{ recipe.name }}">
-            <div class="card-body">
-              <h5 class="card-title">{{ recipe.name }}</h5>
-              <p class="card-text">{{ recipe.description }}</p>
-              <a href="#" class="btn btn-primary">See Recipe</a>
-            </div>
-        </div>
-        
-        <app-recipe-item></app-recipe-item>
+        <app-recipe-item 
+        *ngFor="let recipeElm of recipes"
+        [recipe]="recipeElm"
+        (recipeSelected)="onRecipeSelected($event)"></app-recipe-item>
     </div>
 </div>

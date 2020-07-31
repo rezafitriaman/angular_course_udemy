@@ -18,4 +18,12 @@ export class ShoppingListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onReciveingredientsInputAdded(ingredient: Ingredient) {
+    this.ingredients.push(ingredient);
+  }
+
+  onReciveingredientsInputDeleted() {
+    this.ingredients.pop();
+  }
+
 }

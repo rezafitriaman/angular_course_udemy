@@ -1,9 +1,10 @@
 <div class="row">
     <div class="col-md-12">
-        <app-shopping-edit></app-shopping-edit>
+        <app-shopping-edit (ingredientsAdd)='onReciveingredientsInputAdded($event)'
+                            (ingredientsDelete)='onReciveingredientsInputDeleted()'></app-shopping-edit>
         <hr>
         <ul class="list-group">
-            <li class="list-group-item" 
+            <li class="list-group-item"
                 *ngFor="let ingredient of ingredients">
                 {{ingredient.name}} ({{ingredient.amount}})
             </li>
