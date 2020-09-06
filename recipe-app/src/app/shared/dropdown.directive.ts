@@ -15,7 +15,8 @@ export class DropdownDirective implements OnInit{
     }
 
     @HostListener('document:click', ['$event']) toggleShow(eventData: Event) {
-        console.log(this.elRef.nativeElement)
+        console.log('nativeElement', this.elRef.nativeElement)
+        console.log('eventData', eventData.target)
         this.isShown = this.elRef.nativeElement.contains(eventData.target) ? !this.isShown : false;
         this.addClassToChild();
     }
