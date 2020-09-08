@@ -3,11 +3,12 @@
         <h6 class="mt-4">Users:</h6>
         <ul class="list-group">
             <li class="list-group-item" *ngFor="let user of users">
-                <a href="">{{ user.name }}</a>
+                <a [routerLink]="['/users', user.id, user.name]">{{ user.name }}</a>
             </li>
           </ul>
     </div>
     <div class="col-12">
-        <app-user></app-user>
+        <router-outlet></router-outlet>
+        <!-- <app-user></app-user> -->
     </div>
 </div>
