@@ -1,6 +1,15 @@
 <div class="mt-4 mb-4">
-    <h4 class="text-center">Welcome to Server Manager 4.0</h4>
-    <p class="text-center">Manage your Servers and Users.</p>
-    <button class="btn btn-primary d-block" 
-        (click)="onLoadServers(1)">Load Servers 1 </button>
+  <h4 class="text-center">Welcome to Server Manager 4.0</h4>
+  <p class="text-center">Manage your Servers and Users.</p>
+   <div class="d-flex button-container align-items-center justify-content-center">
+    <button class="btn btn-primary d-block" (click)="onLoadServers(1)">
+        Load Servers 1
+        </button>
+        <button class="btn btn-success d-block" (click)="onLogin()">
+        Login
+        </button>
+        <button class="btn btn-danger d-block" (click)="onLogout()">
+        Logout
+        </button>
+   </div> 
 </div>
