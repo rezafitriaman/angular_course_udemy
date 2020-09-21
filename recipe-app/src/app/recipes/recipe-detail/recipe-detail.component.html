@@ -1,38 +1,50 @@
 <div class="row">
-    <div class="col-md-12">
-        <div class="card" >
-            <img [src]="recipe.imagePath" alt="{{recipe.name}}"  class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">{{recipe.name}}</h5>
-              <p class="card-text">{{recipe.description}}</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"
-                  *ngFor="let ingredient of recipe.ingredients">{{ingredient.name}} - {{ingredient.amount}}</li>
-            </ul>
-          </div>
+  <div class="col-md-12">
+    <div class="card">
+      <img
+        [src]="recipe.imagePath"
+        alt="{{ recipe.name }}"
+        class="card-img-top"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ recipe.name }}</h5>
+        <p class="card-text">{{ recipe.description }}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li
+          class="list-group-item"
+          *ngFor="let ingredient of recipe.ingredients"
+        >
+          {{ ingredient.name }} - {{ ingredient.amount }}
+        </li>
+      </ul>
     </div>
+  </div>
 </div>
 
 <div class="row">
-    <div class="col-md-12">
-        <div class="dropdown" 
-            (window:resize)="showOrNot = false"
-            appDropdown>
-            <button class="btn btn-secondary dropdown-toggle mt-3" 
-              type="button" 
-              id="dropdownMenuButton" 
-              data-toggle="dropdown" 
-              aria-haspopup="true" 
-              aria-expanded="false">
-              Manage Recipe
-            </button>
-            <div class="dropdown-menu"
-              aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" (click)="onAddToShoppingList()" style="cursor: pointer;">To Shopping List</a>
-              <a class="dropdown-item" href="#">Edit Recipe</a>
-              <a class="dropdown-item" href="#">Delete REcipe</a>
-            </div>
-        </div>
+  <div class="col-md-12">
+    <div class="dropdown" (window:resize)="showOrNot = false" appDropdown>
+      <button
+        class="btn btn-secondary dropdown-toggle mt-3"
+        type="button"
+        id="dropdownMenuButton"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Manage Recipe
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a
+          class="dropdown-item"
+          (click)="onAddToShoppingList()"
+          style="cursor: pointer"
+          >To Shopping List</a
+        >
+        <a class="dropdown-item" style="cursor: pointer">Edit Recipe</a>
+        <a class="dropdown-item" style="cursor: pointer">Delete REcipe</a>
+      </div>
     </div>
+  </div>
 </div>

@@ -1,13 +1,17 @@
 <div class="card mt-2">
-    <img [src]="recipe.imagePath" 
-        class="card-img-top img-responsive" 
-        alt="{{ recipe.name }}">
-    <div class="card-body">
-      <h5 class="card-title">{{ recipe.name }}</h5>
-      <p class="card-text">{{ recipe.description }}</p>
-      <a href="#" 
-          class="btn btn-primary" 
-          (click)="onSelected(recipe)"
-          >See Recipe</a>
-    </div>
+  <img
+    [src]="recipe.imagePath"
+    class="card-img-top img-responsive"
+    alt="{{ recipe.name }}"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ recipe.name }}</h5>
+    <p class="card-text">{{ recipe.description }}</p>
+    <a
+      [routerLink]= "[index]"
+      class="btn btn-primary"
+      style="cursor: pointer; color: white"
+      >See Recipe</a
+    >
+  </div>
 </div>

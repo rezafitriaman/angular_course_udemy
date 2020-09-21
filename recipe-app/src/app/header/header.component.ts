@@ -1,19 +1,20 @@
-import { Component, EventEmitter, Output } from '@angular/core'
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
-    selector: 'app-header',
-    templateUrl: './header.component.html'
+  selector: 'app-header',
+	templateUrl: './header.component.html',
+	styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-    collapsedOrNot = true;
-    showOrNot = false;
-    @Output() featureSelected = new EventEmitter<string>();
-    recipeActive = true;
-    shoppingListActive = false;
+  collapsedOrNot = true;
+  showOrNot = false;
+  //@Output() featureSelected = new EventEmitter<string>();
+  recipeActive = true;
+  shoppingListActive = false;
 
-    ngOnInit(): void {}
+  ngOnInit(): void {}
 
-    onSelect(feature: string) {
+  /* onSelect(feature: string) {
         this.featureSelected.emit(feature);
      
         if(feature === 'recipe') {
@@ -23,5 +24,5 @@ export class HeaderComponent {
             this.recipeActive = false
             this.shoppingListActive = true;
         }
-    }
+    } */
 }
