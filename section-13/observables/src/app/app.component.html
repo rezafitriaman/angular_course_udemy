@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <nav class="nav">
+        <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/">Home</a>
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['user', 1]">User 1</a>
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['user', 2]">User 2</a>
+      </nav>
+    </div>
+    <div class="col-12">
+      <router-outlet></router-outlet>
+      <p *ngIf="userActivated">activated!</p>
+    </div>
+  </div>
+</div>
