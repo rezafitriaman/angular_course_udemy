@@ -22,6 +22,8 @@ export class ShoppingEditComponent implements OnInit, AfterViewInit {
   onAdd() {
     //this.ingredientsAdd.emit(new Ingredient(this.inputNameRef.nativeElement.value, this.inputAmountRef.nativeElement.value));
     this.slService.addIngredient(new Ingredient(this.inputNameRef.nativeElement.value, this.inputAmountRef.nativeElement.value))
+    this.inputNameRef.nativeElement.value = '';
+    this.inputAmountRef.nativeElement.value = '';
   }
 
   onDelete() {
