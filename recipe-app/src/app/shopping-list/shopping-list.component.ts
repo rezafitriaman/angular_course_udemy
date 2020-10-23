@@ -22,9 +22,9 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
     });
   }
 
-/*   onReciveingredientsInputAdded(ingredient: Ingredient) {
-    this.ingredients.push(ingredient);
-  } */
+  //onReciveingredientsInputAdded(ingredient: Ingredient) {
+    //this.ingredients.push(ingredient);
+  //}
 
   onReciveingredientsInputDeleted() {
     this.ingredients.pop();
